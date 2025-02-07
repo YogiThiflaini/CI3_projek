@@ -23,7 +23,7 @@
 
 </head>
 
-<body class="bg-gradient-primary">
+<body class="bg-gradient-success">
 
     <div class="container">
 
@@ -43,21 +43,34 @@
                                     <?php echo $this->session->flashdata('info') ?> 
 
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Login Sistem <a href="<?= base_url() ?>panels">admin</a></h1>
+                                        <h1 class="h4 text-gray-900 mb-4">Login Sistem <a href="<?= base_url() ?>panel">konsumen</a></h1>
                                     </div>
-                                    <form method="post" action="<?= base_url() ?>login" class="user">
+                                    <form method="post" action="<?= base_url() ?>konsumen/simpanK" class="user">
                                         <div class="form-group">
-                                            <input type="text" name="username" class="form-control form-control-user"
-                                                id="exampleInputEmail" aria-describedby="emailHelp"
-                                                placeholder="Enter Username...">
+                                            <input type="text" name="nama_konsumen" class="form-control form-control-user" placeholder="input nama konsumen" required>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <input type="text" name="username" class="form-control form-control-user"  placeholder="input username" required>
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" name="password" class="form-control form-control-user"
-                                                id="exampleInputPassword" placeholder="Password">
+                                            <input type="text" name="password" class="form-control form-control-user"  placeholder="input password" required>
                                         </div>
-                                        
-                                        <button type="submit" class="btn btn-primary btn-user btn-block">Login</button>
+
+                                        <div class="form-group">
+                                            <textarea name="alamat_konsumen" cols="30" rows="2" class="form-control form-control-user" placeholder="input alamat konsumen" required></textarea>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <input type="text" name="no_telp" class="form-control form-control-user" placeholder="input no telpon" >
+                                        </div>
+
+                                        <button type="submit" class="btn btn-success btn-user btn-block"> Simpan </button>
                                     </form>
+                                    <hr>
+                                    <div class="text-center">
+                                        <a class="small" href="<?= base_url() ?>panels">Sudah punya akun? Login!</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>

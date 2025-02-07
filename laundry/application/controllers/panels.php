@@ -1,16 +1,16 @@
 <?php 
 
-class Panel extends CI_Controller{
+class Panels extends CI_Controller{
 
 	public function index()
 	{
-		$this->load->view('backend/login');
+		$this->load->view('frontend/login');
 	}
 
 	public function logout()
 	{
 		$this->session->sess_destroy();
-		redirect('panel');
+		redirect('panels');
 	}
 }
 

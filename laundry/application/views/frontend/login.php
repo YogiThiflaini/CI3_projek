@@ -23,7 +23,7 @@
 
 </head>
 
-<body class="bg-gradient-primary">
+<body class="bg-gradient-success">
 
     <div class="container">
 
@@ -43,9 +43,9 @@
                                     <?php echo $this->session->flashdata('info') ?> 
 
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Login Sistem <a href="<?= base_url() ?>panels">admin</a></h1>
+                                        <h1 class="h4 text-gray-900 mb-4">Login Sistem <a href="<?= base_url() ?>panel">konsumen</a></h1>
                                     </div>
-                                    <form method="post" action="<?= base_url() ?>login" class="user">
+                                    <form method="post" action="<?= base_url() ?>login/l_kons" class="user">
                                         <div class="form-group">
                                             <input type="text" name="username" class="form-control form-control-user"
                                                 id="exampleInputEmail" aria-describedby="emailHelp"
@@ -56,8 +56,12 @@
                                                 id="exampleInputPassword" placeholder="Password">
                                         </div>
                                         
-                                        <button type="submit" class="btn btn-primary btn-user btn-block">Login</button>
+                                        <button type="submit" class="btn btn-success btn-user btn-block">Login</button>
                                     </form>
+                                    <hr>
+                                    <div class="text-center">
+                                        <a class="small" href="<?= base_url() ?>regis">Belum punya akun? Daftar!</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>

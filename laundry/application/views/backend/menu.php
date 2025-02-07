@@ -36,13 +36,13 @@
 
         <!-- Nav Item - Charts -->
         <li class="nav-item">
-            <a class="nav-link" href="charts.html">
+            <a class="nav-link" href="<?= base_url() ?>konsumen">
                 <span>Data Konsumen</span>
             </a>
         </li>
 
         <li class="nav-item">
-            <a class="nav-link" href="charts.html">
+            <a class="nav-link" href="<?= base_url() ?>paket">
                 <span>Data Paket</span>
             </a>
         </li>
@@ -59,6 +59,9 @@
             </a>
         </li>
 
-</ul>
+        <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        </div>
+    </ul>
 </body>
 </html>

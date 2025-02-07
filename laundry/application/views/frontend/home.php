@@ -1,7 +1,8 @@
+<?php echo $this->session->flashdata('info') ?> 
 <div class="container">
 	<div class="row my-5" data-aos="fade-up" data-aos-duration="1000">
 		<div class="col-md-4">
-				<img class="set-image" src="<?php base_url() ?>assets/images/gambar.jpg">
+				<img class="set-image" src="<?= base_url() ?>assets/images/gambar.jpg">
 		</div>
 		<div class="col-md-8">
 			<h5>Laundry Online</h5>

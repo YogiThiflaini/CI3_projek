@@ -12,8 +12,16 @@ class Login extends CI_Controller{
 	{
 		$username = $this->input->post('username');
 		$password = $this->input->post('password');
-		$this->m_login->proses_login($username, $password);
+		$this->m_login->proses_loginA($username, $password);
 	}
+
+	public function l_kons()
+	{
+		$username = $this->input->post('username');
+		$password = $this->input->post('password');
+		$this->m_login->proses_loginK($username, $password);
+	}
+
 }
 
  ?>
