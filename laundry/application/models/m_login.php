@@ -33,6 +33,7 @@ class M_login extends CI_Model{
 			foreach ($query->result() as $row) {
 				$sess = array(
 					'kode_konsumen' => $row->kode_konsumen,
+					'nama_konsumen' => $row->nama_konsumen,
 					'username' => $row->username,
 					'password' => $row->password
 				);

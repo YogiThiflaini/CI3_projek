@@ -29,6 +29,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="<?= base_url() ?>cek_londri">Cek Laundry</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="<?= base_url() ?>transaksi">Transaksi</a>
+            </li>
         </ul>
         <ul class="navbar-nav ml-auto">
             <?php if ($this->session->userdata('username')): ?>

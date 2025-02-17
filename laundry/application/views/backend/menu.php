@@ -16,7 +16,7 @@
     <ul class="navbar-nav bg_menu bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
 <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url() ?>dashboard">
         <div class="sidebar-brand-icon rotate-n-15">
             <i class="fas fa-laugh-wink"></i>
         </div>
@@ -26,9 +26,9 @@
         <!-- Divider -->
         <hr class="sidebar-divider my-0">
 
-        <!-- Nav Item - Dashboard -->
+        <!-- Nav Item - dashboard -->
         <li class="nav-item active">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="<?= base_url() ?>dashboard">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dashboard</span>
             </a>
@@ -37,24 +37,35 @@
         <!-- Nav Item - Charts -->
         <li class="nav-item">
             <a class="nav-link" href="<?= base_url() ?>konsumen">
+                <i class="fas fa-fw fa-users"></i>
                 <span>Data Konsumen</span>
             </a>
         </li>
 
         <li class="nav-item">
             <a class="nav-link" href="<?= base_url() ?>paket">
+                <i class="fas fa-fw fa-box-open"></i>
                 <span>Data Paket</span>
             </a>
         </li>
 
         <li class="nav-item">
-            <a class="nav-link" href="charts.html">
+            <a class="nav-link" href="<?= base_url() ?>transaksi/tambah">
+                <i class="fas fa-fw fa-dollar-sign"></i>
                 <span>Data Transaksi</span>
             </a>
         </li>
 
         <li class="nav-item">
-            <a class="nav-link" href="charts.html">
+            <a class="nav-link" href="<?= base_url() ?>transaksi/riwayat">
+                <i class="fas fa-fw fa-history"></i>
+                <span>Riwayat Transaksi</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url() ?>laporan">
+                <i class="fas fa-fw fa-file-alt"></i>
                 <span>Laporan</span>
             </a>
         </li>
