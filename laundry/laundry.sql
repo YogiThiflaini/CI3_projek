@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 21, 2025 at 03:12 AM
+-- Generation Time: Mar 05, 2025 at 04:16 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.4
 
@@ -34,6 +34,13 @@ CREATE TABLE `about` (
   `gambar_about` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `about`
+--
+
+INSERT INTO `about` (`id_about`, `judul_about`, `deskripsi_about`, `gambar_about`) VALUES
+(5, 'Laundry Online', 'menangani laundry online secara jujur dan bertanggung jawab', 'gambar.jpg');
+
 -- --------------------------------------------------------
 
 --
@@ -49,6 +56,14 @@ CREATE TABLE `konsumen` (
   `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `konsumen`
+--
+
+INSERT INTO `konsumen` (`kode_konsumen`, `nama_konsumen`, `alamat_konsumen`, `no_telp`, `username`, `password`) VALUES
+(1, 'bodi', 'punggul gedangan', '08223814150', 'dodi', '81dc9bdb52d04dc20036dbd8313ed055'),
+(5, 'bambang', 'sruni gedangan', '08223814150', 'bambang', '827ccb0eea8a706c4c34a16891f84e7b');
+
 -- --------------------------------------------------------
 
 --
@@ -60,6 +75,14 @@ CREATE TABLE `paket` (
   `nama_paket` varchar(50) NOT NULL,
   `harga_paket` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `paket`
+--
+
+INSERT INTO `paket` (`kode_paket`, `nama_paket`, `harga_paket`) VALUES
+(1, 'Cuci Kering', '5000'),
+(2, 'Cuci Setrika', '8000');
 
 -- --------------------------------------------------------
 
@@ -79,6 +102,16 @@ CREATE TABLE `transaksi` (
   `status` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `transaksi`
+--
+
+INSERT INTO `transaksi` (`kode_transaksi`, `kode_konsumen`, `kode_paket`, `tgl_masuk`, `tgl_ambil`, `berat`, `grand_total`, `bayar`, `status`) VALUES
+(1, 5, 1, '2025-01-24 09:46:11', '0000-00-00 00:00:00', 2, 10000, 'Belum Lunas', 'Baru'),
+(2, 1, 2, '2025-01-24 10:57:55', '2025-01-24 05:35:38', 2, 16000, 'Lunas', 'Selesai'),
+(3, 5, 1, '2025-03-05 10:06:25', '0000-00-00 00:00:00', 1, 5000, 'Belum Lunas', 'Baru'),
+(8, 5, 2, '2025-03-05 10:13:06', '0000-00-00 00:00:00', 1, 8000, 'Belum Lunas', 'Baru');
+
 -- --------------------------------------------------------
 
 --
@@ -97,8 +130,21 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id_user`, `username`, `password`, `nama`, `email`, `notelp`, `alamat`, `status`) VALUES
+(1, 'admin', '81dc9bdb52d04dc20036dbd8313ed055', 'admin', 'admin@gmail.com', '081234567', 'gedangan', 'Y');
+
+--
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `about`
+--
+ALTER TABLE `about`
+  ADD PRIMARY KEY (`id_about`);
 
 --
 -- Indexes for table `konsumen`
@@ -133,28 +179,34 @@ ALTER TABLE `user`
 --
 
 --
+-- AUTO_INCREMENT for table `about`
+--
+ALTER TABLE `about`
+  MODIFY `id_about` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
 -- AUTO_INCREMENT for table `konsumen`
 --
 ALTER TABLE `konsumen`
-  MODIFY `kode_konsumen` int(12) NOT NULL AUTO_INCREMENT;
+  MODIFY `kode_konsumen` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `paket`
 --
 ALTER TABLE `paket`
-  MODIFY `kode_paket` int(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `kode_paket` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `kode_transaksi` int(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `kode_transaksi` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Constraints for dumped tables

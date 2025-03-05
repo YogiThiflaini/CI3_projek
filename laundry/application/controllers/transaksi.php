@@ -68,6 +68,26 @@ class Transaksi extends CI_Controller{
 			redirect('transaksi/tambah','refresh');
 		}
 	}
+	public function simpanK()
+	{
+		$data = array(
+			'kode_konsumen' => $this->input->post('kode_konsumen'),
+			'kode_paket' => $this->input->post('kode_paket'),
+			'tgl_masuk' => $this->input->post('tgl_masuk'),
+			'tgl_ambil' => '',
+			'berat' => $this->input->post('berat'),
+			'grand_total' => $this->input->post('grand_total'),
+			'bayar' => $this->input->post('bayar'),
+			'status' => $this->input->post('status'),
+		);
+
+		$query = $this->db->insert('transaksi', $data);
+    	$insert_id = $this->db->insert_id();
+		if ($query = true) {
+			$this->session->set_flashdata('info', 'Data Transaksi Berhasil ditambahkan. Kode Transaksi Anda: ' . $insert_id);
+			redirect('cek_londri','refresh');
+		}
+	}
 
 	public function riwayat()
 	{
